@@ -11,4 +11,4 @@ freq2im = lambda f: fp.irfft(fp.irfft(f, axis=1), axis=0)
 for i in range(len(x_train)):
     freq = im2freq(x_train[i])
     back = freq2im(freq)
-    scipy.misc.imsave("data/"+ str(i) + ".jpg", freq)
+    scipy.misc.imsave("data/" + str(i) + ".jpg", freq)
