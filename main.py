@@ -24,9 +24,9 @@ rms = RMSprop(lr=0.001, rho=0.9, epsilon=1e-08, decay=0.001)
 
 model.compile(loss="mean_squared_error", optimizer=rms)
 
-import sys
+# import sys
 
-sys.exit()
+# sys.exit()
 
 for epoch in range(1, epoch + 1):
     train_X, train_Y = shuffle(x_train, y_train)
