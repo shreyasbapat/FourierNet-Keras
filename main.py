@@ -23,7 +23,7 @@ ada = Adadelta(lr=5.0, rho=0.95, epsilon=1e-08, decay=0.001)
 rms = RMSprop(lr=0.001, rho=0.9, epsilon=1e-08, decay=0.001)
 
 model.compile(loss="mean_squared_error", optimizer=rms)
-
+model.summary()
 # import sys
 
 # sys.exit()
