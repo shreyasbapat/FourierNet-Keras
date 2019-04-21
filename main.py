@@ -2,7 +2,7 @@ from keras.layers.core import Reshape
 from keras.callbacks import ModelCheckpoint
 from keras.optimizers import Adadelta, RMSprop
 from sklearn.utils import shuffle
-import scipy.misc
+import imageio
 import numpy as np
 
 from model import model_final
@@ -55,4 +55,4 @@ for epoch in range(1, epoch + 1):
         temp[:, :, 1] = temp[:, :, 0]
         temp[:, :, 2] = temp[:, :, 0]
         temp = temp * 255
-        scipy.misc.imsave(CheckDir + str(epoch) + ".jpg", temp)
+        imageio.imwrite(CheckDir + str(epoch) + ".jpg", temp)
