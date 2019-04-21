@@ -3,6 +3,7 @@ from keras.callbacks import ModelCheckpoint
 from keras.optimizers import Adadelta, RMSprop
 from sklearn.utils import shuffle
 import scipy.misc
+import numpy as np
 
 from model import model_final
 from data_load import load
