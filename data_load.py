@@ -22,4 +22,9 @@ def load():
         freq = im2freq(x_test[i])
         back = freq2im(freq)
         y_test.append(freq)
+    x_train = np.array(x_train).reshape((60000, 28, 28, -1))
+    y_train = np.array(y_train).reshape((60000, 28, 28, -1))
+    x_test = np.array(x_test).reshape((10000, 28, 28, -1))
+    y_test = np.array(y_test).reshape((10000, 28, 28, -1))
+
     return x_train, y_train, x_test, y_test
